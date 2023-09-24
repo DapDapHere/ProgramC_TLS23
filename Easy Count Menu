@@ -1,0 +1,31 @@
+// Tugas Pemrograman Muhammad Daffa Al Faridzi
+// 23/521731/TK/57568
+// Pemrograman untuk menunjukkan menu makanan dan menjumlahkan harganya
+
+#include<stdio.h>
+#include<conio.h>
+int main(){
+    unsigned int TotalHarga = 0;
+    char Kode;
+    puts(" Kode     Menu");
+    puts(" n         Nasi Goreng        = Rp12.000,00");
+    puts(" b         Batagor            = Rp8.000,00");
+    puts(" e         Es Teh             = Rp3.000,00");
+    puts(" s         Selesai");
+    do{
+        printf("\nMasukkan kode sesuai makanan/minuman yang dipesan:    ");
+        Kode=getch();
+        printf("%c", Kode);
+        if(Kode == 'n')
+                TotalHarga += 12000;
+        else if(Kode == 'b')
+                TotalHarga += 8000;
+        else if(Kode == 'e')
+                TotalHarga += 3000;
+        else if(Kode == 's')
+                printf("\n\nTotal Harga  = %d", TotalHarga);
+        else
+                printf("<Kode Salah!>");
+    } while(Kode != 's');
+        return 0;
+}
